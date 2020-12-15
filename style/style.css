@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    height: 334px;
+     margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .08);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.wrapper div {
+    width: 70px;
+    height: 20px;
+    margin:  10px 10px;
+    text-align: center;
+}
+.wrapper div a {
+text-decoration: none;
+
+}
