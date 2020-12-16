@@ -12,15 +12,12 @@
     align-items: center;
     text-align: center;
 }
-.block {
-    display: flex;
-}
 
-.box {
+#block{
     margin: 5px;
     width: 50px;
     height: 50px;
-    background-color: silver;
+    background-color: orange;
 }
 
 
