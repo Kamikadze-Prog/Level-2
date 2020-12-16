@@ -26,7 +26,7 @@ function remove_box() {
 
 function hide_box() {
     if (box.className === "hidden") {
-        box.className = "showed";
+        box.classList.remove("hidden");
     } else {
         box.className = "hidden";
     }

@@ -12,18 +12,20 @@
     align-items: center;
 }
 
-#rect{
+.rect-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+.rect{
+    display: block;
     width: 100px;
     height: 100px;
+    margin: 0 5px;
     background-color: black;
 }
 
 .buttons {
-    padding: 10px;
-}
-
-.buttons button {
-    margin: 5px;
+   margin: 10px;
 }
 
 .hidden {
