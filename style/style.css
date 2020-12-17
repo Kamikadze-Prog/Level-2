@@ -96,9 +96,8 @@ textarea {
 }
 
 .mouse_coordinate {
-    width: 100px;
-    height: 60px;
     position: absolute;
+    display: flex;
     top: 0;
     right: 0;
 }

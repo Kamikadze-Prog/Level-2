@@ -123,6 +123,10 @@ function makeAreaImg() {
 
 /* Task-10*/
 document.onmousemove = (function (event) {
-    document.getElementById('mouseCord').value = "Х: " + event.pageX + "  " + "Y: " + event.pageY;
+    document.getElementById('mouseCord').value = "Х: " + event.pageX + "  " + "Y: " + event.pageY ;
 })
+
+/*Task-11*/
+let userLang = navigator.language;
+document.getElementById('userLanguage').value = "Lang: " +userLang;
 
