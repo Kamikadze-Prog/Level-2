@@ -99,6 +99,26 @@ function makeImg() {
     let tagName = document.createElement("img");
     tagName.src = document.getElementById("input-checker-3").value;
     tagName.width = 200;
-    let element = document.getElementById("img-wrapper");
+    let element = document.getElementById("img-wrapper-1");
     element.appendChild(tagName);
 }
+
+/* Task-9*/
+
+document.getElementById("img-btn-2").onclick = makeAreaImg;
+
+function makeAreaImg() {
+
+    let areaValue = document.getElementById("text-area").value;
+    let arrValue = areaValue.split('\n');
+
+    for (let i = 0; i < arrValue.length; i++) {
+        let tagName = document.createElement("img");
+        tagName.src = arrValue[i];
+        tagName.width = 200;
+        let element = document.getElementById("img-wrapper-2");
+        element.appendChild(tagName);
+    }
+}
+
+

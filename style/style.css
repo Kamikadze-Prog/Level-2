@@ -71,6 +71,10 @@ button {
     background-color: orange;
 }
 
+input {
+    width: 200px;
+}
+
 #block-2 {
     margin: 5px;
     width: 50px;
@@ -84,5 +88,9 @@ button {
     height: 20px;
     background-color: green;
     opacity: 0;
+}
 
+textarea {
+    width: 250px;
+    height: 50px;
 }
