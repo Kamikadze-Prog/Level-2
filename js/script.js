@@ -121,4 +121,8 @@ function makeAreaImg() {
     }
 }
 
+/* Task-10*/
+document.onmousemove = (function (event) {
+    document.getElementById('mouseCord').value = "Х: " + event.pageX + "  " + "Y: " + event.pageY;
+})
 
