@@ -104,11 +104,9 @@ function makeImg() {
 }
 
 /* Task-9*/
-
 document.getElementById("img-btn-2").onclick = makeAreaImg;
 
 function makeAreaImg() {
-
     let areaValue = document.getElementById("text-area").value;
     let arrValue = areaValue.split('\n');
 
@@ -129,4 +127,3 @@ document.onmousemove = (function (event) {
 /*Task-11*/
 let userLang = navigator.language;
 document.getElementById('userLanguage').value = "Lang: " +userLang;
-
