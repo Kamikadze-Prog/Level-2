@@ -91,3 +91,14 @@ document.getElementById("input-checker-2")
     .addEventListener("focus", () => red_box_2.style.opacity = '1');
 document.getElementById("input-checker-2")
     .addEventListener("input", () => red_box_2.style.opacity = '0');
+
+/* Task-8*/
+document.getElementById("img-btn-1").onclick = makeImg;
+
+function makeImg() {
+    let tagName = document.createElement("img");
+    tagName.src = document.getElementById("input-checker-3").value;
+    tagName.width = 200;
+    let element = document.getElementById("img-wrapper");
+    element.appendChild(tagName);
+}
