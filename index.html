@@ -5,19 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentin Elkin</title>
     <link rel="stylesheet" href="./style/style.css">
-
 </head>
 
 <body>
 <div class="wrapper">
-    <div><a href="task1-2/index.html" target="_blank">Task 1-2</a></div>
-    <div><a href="task-3/index.html" target="_blank">Task 3</a></div>
-    <div><a href="task-4/index.html" target="_blank">Task 4</a></div>
-    <div><a href="task-5/index.html" target="_blank">Task 5</a></div>
-    <div><a href="task-6/index.html" target="_blank">Task 6</a></div>
-    <div><a href="task-7/index.html" target="_blank">Task 7</a></div>
+    <div class="buttons">
+        <button id="display">Click me</button>
+        <button id="remove">Click me</button>
+        <button id="hide">Click me</button>
+    </div>
 
-
+    <div id="rect-wrapper">
+        <div id="rect"></div>
+    </div>
 </div>
+
+<div class="wrapper">
+    <div class="buttons">
+        <button id="hide-2">Click me</button>
+    </div>
+
+    <div class="rect-wrapper">
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+        <div class="rect"></div>
+    </div>
+</div>
+
+
+<div class="wrapper">
+    <label>
+        <input type="text" name="select" id="input-checker">
+    </label>
+    <div class="buttons">
+        <button id="hide-3">Click me</button>
+    </div>
+
+    <div class="block">
+        <div class="rect box">.rect</div>
+        <div class="rect-wrapper"></div>
+        <div class="rect-1 box">.rect-1</div>
+        <div class="rect-2 box">.rect-2</div>
+        <div class="rect-3 box">.rect-3</div>
+        <div class="rect-4 box">.rect-4</div>
+        <div class="rect-2 box">.rect-2</div>
+    </div>
+    <p class="paragraph">.paragraph</p>
+    <h1 class="main-text">.main-text</h1>
+</div>
+
+<div class=wrapper>
+    <div id="block"></div>
+</div>
+
+<div class=wrapper>
+    <button class="hide" onmouseover="mouse_hover_1(this)" onmouseout="mouseOut(this)">hover me</button>
+    <div id="block-2"></div>
+</div>
+
+<div class=wrapper>
+    <label>
+        <input  type="text" name="select" id="input-checker-2">
+    </label>
+    <div id="rect-2"></div>
+</div>
+
+<script src="./js/script.js"></script>
+
 </body>
 </html>

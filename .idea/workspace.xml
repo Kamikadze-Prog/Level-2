@@ -22,6 +22,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub\Level-2\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GitHub\Level-2" />
     </key>
@@ -39,6 +42,7 @@
       <workItem from="1608106943157" duration="13574000" />
       <workItem from="1608123093607" duration="13321000" />
       <workItem from="1608149387080" duration="157000" />
+      <workItem from="1608190029488" duration="5471000" />
     </task>
     <servers />
   </component>
