@@ -101,3 +101,6 @@ textarea {
     top: 0;
     right: 0;
 }
+.mouse_coordinate input {
+    width: 120px;
+}
