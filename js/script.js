@@ -121,9 +121,19 @@ function makeAreaImg() {
 
 /* Task-10*/
 document.onmousemove = (function (event) {
-    document.getElementById('mouseCord').value = "Х: " + event.pageX + "  " + "Y: " + event.pageY ;
+    document.getElementById('mouseCord').textContent = "Х: " + event.pageX + "  " + "Y: " + event.pageY;
 })
 
 /*Task-11*/
 let userLang = navigator.language;
-document.getElementById('userLanguage').value = "Lang: " +userLang;
+document.getElementById('userLanguage').textContent = "Lang: " + userLang;
+
+/*Task-12*/
+navigator.geolocation.getCurrentPosition(success);
+
+function success(pos) {
+    let crd = pos.coords;
+    document.getElementById('latitude').textContent = `${crd.latitude}`;
+    document.getElementById('longitude').textContent = `${crd.longitude}`;
+}
+

@@ -25,7 +25,7 @@
 }
 
 button {
-   padding: 5px;
+    padding: 5px;
 }
 
 .buttons {
@@ -95,12 +95,21 @@ textarea {
     height: 50px;
 }
 
-.mouse_coordinate {
+.mouse_coordinate, .geo-wrapper {
+    width: 210px;
+    height: 30px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .08);
     position: fixed;
     display: flex;
     top: 0;
     right: 0;
+    padding: 5px;
 }
-.mouse_coordinate input {
-    width: 100px;
+
+#userLanguage, #latitude {
+    margin-right: 10px;
+}
+
+.geo-wrapper {
+    top: 35px;
 }
