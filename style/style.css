@@ -120,7 +120,7 @@ textarea {
     right: 30px;
     width: 50px;
     text-align: center;
-    line-height:30px;
+    line-height: 30px;
     background: silver;
     cursor: pointer;
     border-radius: 2px;
@@ -128,7 +128,7 @@ textarea {
 }
 
 .back_to_top:hover {
-    background:cornflowerblue;
+    background: cornflowerblue;
 }
 
 .back_to_top-show {
@@ -147,7 +147,23 @@ textarea {
 }
 
 #small-block {
-    width:50%;
+    width: 50%;
     height: 50%;
     background-color: black;
 }
+
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.not_scroll_box {
+    width: 100%;
+    height: 100%;
+    background-color: silver;
+    opacity: 0.5;
+    position: fixed;
+}
+
+

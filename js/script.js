@@ -193,3 +193,30 @@ function clickedSmallBlock(event) {
     event.stopPropagation()
 
 }
+
+/*Task-16*/
+document.getElementById("show_hide_block").onclick = showBlock;
+let body = document.querySelector('.silver_box');
+
+function showBlock() {
+    body.classList.add('not_scroll_box');
+    let tagName = document.createElement("img");
+    document.querySelector('body').classList.add('stop-scrolling')
+    if (body.classList.contains('not_scroll_box')) {
+        body.addEventListener("click", removeBox);
+    }
+
+
+}
+
+function removeBox() {
+    document.querySelector('body').classList.remove('stop-scrolling')
+    document.querySelector('.silver_box').classList.remove('not_scroll_box');
+}
+
+
+
+
+
+
+
