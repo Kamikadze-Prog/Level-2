@@ -185,3 +185,11 @@ let scrollHeight = Math.max(
 );
 
 /*Task-15*/
+document.getElementById('big-block').onclick = () => alert("your clicked big block");
+document.getElementById('small-block').onclick = clickedSmallBlock;
+
+function clickedSmallBlock(event) {
+    alert("Your clicked small block")
+    event.stopPropagation()
+
+}

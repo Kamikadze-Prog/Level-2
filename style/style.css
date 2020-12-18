@@ -134,3 +134,20 @@ textarea {
 .back_to_top-show {
     display: block;
 }
+
+#big-block {
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
+
+#small-block {
+    width:50%;
+    height: 50%;
+    background-color: black;
+}
