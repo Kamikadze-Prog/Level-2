@@ -137,3 +137,51 @@ function success(pos) {
     document.getElementById('longitude').textContent = `${crd.longitude}`;
 }
 
+/*Task-13*/
+/*
+localStorages();
+function localStorages() {
+    if (typeof (Storage) !== "undefined") {
+        if (document.getElementById('localStorage').textContent.length > 0) {
+            localStorage.text = document.getElementById('localStorage').textContent;
+        } else {
+            localStorage.text = 'Введите свой текст11';
+        }
+        document.getElementById("localStorage").innerHTML = "" + localStorage.text;
+    } else {
+        alert("Sorry, your browser does not support web storage...");
+    }
+}*/
+
+/*Task-14*/
+function trackScroll() {
+    let scrolled = window.pageYOffset;
+    let coords = document.documentElement.clientHeight;
+
+    if (scrolled >= (scrollHeight - coords)) {
+        goTopBtn.classList.add('back_to_top-show');
+    }
+    if (scrolled < (scrollHeight - coords)) {
+        goTopBtn.classList.remove('back_to_top-show');
+    }
+}
+
+function backToTop() {
+    if (window.pageYOffset > 0) {
+        window.scrollBy(0, -20);
+        setTimeout(backToTop, 0);
+    }
+}
+
+let goTopBtn = document.querySelector('.back_to_top');
+window.addEventListener('scroll', trackScroll);
+goTopBtn.addEventListener('click', backToTop);
+
+
+let scrollHeight = Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+);
+
+/*Task-15*/

@@ -113,3 +113,24 @@ textarea {
 .geo-wrapper {
     top: 35px;
 }
+
+.back_to_top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    text-align: center;
+    line-height:30px;
+    background: silver;
+    cursor: pointer;
+    border-radius: 2px;
+    display: none;
+}
+
+.back_to_top:hover {
+    background:cornflowerblue;
+}
+
+.back_to_top-show {
+    display: block;
+}
