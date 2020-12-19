@@ -200,13 +200,10 @@ let body = document.querySelector('.silver_box');
 
 function showBlock() {
     body.classList.add('not_scroll_box');
-    let tagName = document.createElement("img");
     document.querySelector('body').classList.add('stop-scrolling')
     if (body.classList.contains('not_scroll_box')) {
         body.addEventListener("click", removeBox);
     }
-
-
 }
 
 function removeBox() {
@@ -214,9 +211,12 @@ function removeBox() {
     document.querySelector('.silver_box').classList.remove('not_scroll_box');
 }
 
+/*Task-17*/
+document.getElementById('button-submit').onclick = offReload;
 
-
-
+function offReload(e) {
+    e.preventDefault();
+}
 
 
 
