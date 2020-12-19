@@ -109,8 +109,10 @@
 
 
 <div class=wrapper>
-    <div contenteditable="true" id="1">
-        Введите свой текст.
+    <div class="save_wrapper">
+    <div class="save-store" contenteditable="true" id="local_store"></div>
+    <div class="save-store" contenteditable="true" id="cookies_box"></div>
+    <div class="save-store" contenteditable="true" id="session_store"></div>
     </div>
 </div>
 
@@ -134,9 +136,9 @@
 
 <div class=wrapper>
     <label>
-        <input name="file" type="file" class="main_input_file" />
+        <input name="file" type="file" class="main_input_file"/>
         <span>Обзор...</span>
-        <input class="f_name" type="text" id="f_name" value="Файл не выбран." disabled />
+        <input class="f_name" type="text" id="f_name" value="Файл не выбран." disabled/>
     </label>
 </div>
 

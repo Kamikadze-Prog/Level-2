@@ -71,7 +71,7 @@ button {
     height: 50px;
     background-color: orange;
 }
- 
+
 
 #block-2 {
     margin: 5px;
@@ -132,6 +132,23 @@ textarea {
 .back_to_top-show {
     display: block;
 }
+
+.save_wrapper {
+    display: flex;
+    justify-content: space-around;
+
+
+}
+.save-store {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .08);
+
+    width: 200px;
+    padding: 5px;
+    margin: 0 5px;
+    text-align: center;
+    border: 1px solid silver;
+}
+
 
 #big-block {
     margin: 5px;

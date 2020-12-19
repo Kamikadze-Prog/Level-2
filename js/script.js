@@ -138,20 +138,25 @@ function success(pos) {
 }
 
 /*Task-13*/
-/*
-localStorages();
-function localStorages() {
-    if (typeof (Storage) !== "undefined") {
-        if (document.getElementById('localStorage').textContent.length > 0) {
-            localStorage.text = document.getElementById('localStorage').textContent;
-        } else {
-            localStorage.text = 'Введите свой текст11';
-        }
-        document.getElementById("localStorage").innerHTML = "" + localStorage.text;
-    } else {
-        alert("Sorry, your browser does not support web storage...");
-    }
-}*/
+document.getElementById('local_store').innerHTML = localStorage['text'] || 'local';
+setInterval(function() {
+    localStorage['text'] = document.getElementById('local_store').innerHTML;
+
+}, 1000);
+
+var cookies = document.cookie
+document.getElementById('session_store').innerHTML;
+
+setInterval(function() {
+    document.cookie = document.getElementById('cookies_box').innerHTML;
+}, 1000);
+
+
+document.getElementById('session_store').innerHTML = sessionStorage['text'] || 'session';
+setInterval(function() {
+    sessionStorage['text'] = document.getElementById('session_store').innerHTML;
+}, 1000);
+
 
 /*Task-14*/
 function trackScroll() {
