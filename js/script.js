@@ -139,21 +139,22 @@ function success(pos) {
 
 /*Task-13*/
 document.getElementById('local_store').innerHTML = localStorage['text'] || 'local';
-setInterval(function() {
+setInterval(function () {
     localStorage['text'] = document.getElementById('local_store').innerHTML;
 
 }, 1000);
 
-var cookies = document.cookie
+/*
+let cookies = document.cookie
 document.getElementById('session_store').innerHTML;
 
-setInterval(function() {
+setInterval(function () {
     document.cookie = document.getElementById('cookies_box').innerHTML;
 }, 1000);
-
+*/
 
 document.getElementById('session_store').innerHTML = sessionStorage['text'] || 'session';
-setInterval(function() {
+setInterval(function () {
     sessionStorage['text'] = document.getElementById('session_store').innerHTML;
 }, 1000);
 
@@ -190,11 +191,11 @@ let scrollHeight = Math.max(
 );
 
 /*Task-15*/
-document.getElementById('big-block').onclick = () => alert("your clicked big block");
+document.getElementById('big-block').onclick = () => alert("You clicked big block");
 document.getElementById('small-block').onclick = clickedSmallBlock;
 
 function clickedSmallBlock(event) {
-    alert("Your clicked small block")
+    alert("You clicked small block")
     event.stopPropagation()
 
 }
@@ -223,5 +224,25 @@ function offReload(e) {
     e.preventDefault();
 }
 
+/*Task-18*/
+let fileInput = document.querySelector('input[type=file]');
+let filenameContainer = document.querySelector('#filename');
+let dropZone = document.querySelector('.label-input');
+
+fileInput.addEventListener('change', function () {
+    filenameContainer.innerText = fileInput.value.split('\\').pop();
+});
+
+fileInput.addEventListener('dragenter', function () {
+    dropZone.classList.add('dragover');
+});
+
+fileInput.addEventListener('dragleave', function () {
+        dropZone.classList.remove('dragover');
+});
+
+function mouseOutFile() {
+    dropZone.classList.remove("dragover");
+}
 
 

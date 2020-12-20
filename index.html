@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentin Elkin</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +18,6 @@
         <button id="remove">remove</button>
         <button id="hide">opacity</button>
     </div>
-
     <div id="rect-wrapper">
         <div id="rect"></div>
     </div>
@@ -35,7 +36,6 @@
         <div class="rect"></div>
     </div>
 </div>
-
 
 <div class="wrapper">
     <label>
@@ -76,7 +76,6 @@
 
 <div class=wrapper>
     <div id="img-wrapper-1"></div>
-
     <label>
         <input type="text" name="select" id="input-checker-3"
                value="https://img.gazeta.ru/files3/949/12549949/kitty-pic4_zoom-1500x1500-54777.jpg">
@@ -107,12 +106,11 @@
     <span id="longitude"></span>
 </div>
 
-
 <div class=wrapper>
     <div class="save_wrapper">
-    <div class="save-store" contenteditable="true" id="local_store"></div>
-    <div class="save-store" contenteditable="true" id="cookies_box"></div>
-    <div class="save-store" contenteditable="true" id="session_store"></div>
+        <div class="save-store" contenteditable="true" id="local_store"></div>
+        <div class="save-store" contenteditable="true" id="cookies_box"></div>
+        <div class="save-store" contenteditable="true" id="session_store"></div>
     </div>
 </div>
 
@@ -133,15 +131,15 @@
     </form>
 </div>
 
-
 <div class=wrapper>
-    <label>
-        <input name="file" type="file" class="main_input_file"/>
-        <span>Обзор...</span>
-        <input class="f_name" type="text" id="f_name" value="Файл не выбран." disabled/>
+    <label for="input-file" class="label-input">
+        <div class="inner-wrapper">
+            <img alt="input-img" src="method-draw-image.svg" height="28" width="28">
+            <span class="input-file_text">Загрузить файл…</span>
+        </div>
+        <input type="file" onmouseout="mouseOutFile(this)" id="input-file">
     </label>
-</div>
-
+    <p id="filename"></p></div>
 <a class="back_to_top" title="Вверх">Вверх</a>
 
 <script src="./js/script.js"></script>
