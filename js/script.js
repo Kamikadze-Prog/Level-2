@@ -1,3 +1,4 @@
+/*Task-1*/
 document.getElementById("display").onclick = display_box;
 document.getElementById("remove").onclick = remove_box;
 document.getElementById("hide").onclick = hide_box_1;
@@ -24,6 +25,7 @@ function remove_box() {
     }
 }
 
+/*Task-2*/
 function hide_box_1() {
     if (box.className === "hidden") {
         box.classList.remove("hidden");
@@ -139,25 +141,20 @@ function success(pos) {
 
 /*Task-13*/
 document.getElementById('local_store').innerHTML = localStorage['text'] || 'local';
+document.getElementById('cookies_box').innerHTML = document.cookie.split('=')[1] || 'cookies';
+document.getElementById('session_store').innerHTML = sessionStorage['text'] || 'session';
+
 setInterval(function () {
     localStorage['text'] = document.getElementById('local_store').innerHTML;
-
-}, 1000);
-
-/*
-let cookies = document.cookie
-document.getElementById('session_store').innerHTML;
+}, 500);
 
 setInterval(function () {
-    document.cookie = document.getElementById('cookies_box').innerHTML;
-}, 1000);
-*/
+    document.cookie = `document=${document.getElementById('cookies_box').innerHTML}`;
+}, 500);
 
-document.getElementById('session_store').innerHTML = sessionStorage['text'] || 'session';
 setInterval(function () {
     sessionStorage['text'] = document.getElementById('session_store').innerHTML;
-}, 1000);
-
+}, 500);
 
 /*Task-14*/
 function trackScroll() {
@@ -182,7 +179,6 @@ function backToTop() {
 let goTopBtn = document.querySelector('.back_to_top');
 window.addEventListener('scroll', trackScroll);
 goTopBtn.addEventListener('click', backToTop);
-
 
 let scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -238,11 +234,9 @@ fileInput.addEventListener('dragenter', function () {
 });
 
 fileInput.addEventListener('dragleave', function () {
-        dropZone.classList.remove('dragover');
+    dropZone.classList.remove('dragover');
 });
 
 function mouseOutFile() {
     dropZone.classList.remove("dragover");
 }
-
-
