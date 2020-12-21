@@ -35,26 +35,20 @@ function hide_box_1() {
 }
 
 /*Task-3*/
-document.getElementById("hide-2").onclick = hide_box_2;
-let box_2 = document.querySelectorAll(".rect-wrapper")
-
+document.getElementById("hide-2").addEventListener("click", hide_box_2);
 function hide_box_2() {
-    for (let i = 0; i < box_2.length; i++) {
-        box_2[i].classList.toggle("hidden");
-    }
+    let box_2 = document.querySelectorAll(".rect-wrapper");
+    box_2.forEach(el => el.classList.toggle("hidden"));
 }
 
 /*Task-4*/
-document.getElementById("hide-3").onclick = hide_box_3;
+document.getElementById("hide-3").addEventListener("click", hide_box_3);
 
 function hide_box_3() {
     let input = document.getElementById("input-checker").value;
-
     if (input.length !== 0) {
         let box_3 = document.querySelectorAll(input)
-        for (let i = 0; i < box_3.length; i++) {
-            box_3[i].classList.toggle("hidden");
-        }
+        box_3.forEach(el => el.classList.toggle("hidden"));
     } else {
         alert("You not write class name")
     }
@@ -106,12 +100,11 @@ function makeImg() {
 }
 
 /* Task-9*/
-document.getElementById("img-btn-2").onclick = makeAreaImg;
+document.getElementById("img-btn-2").addEventListener("click", makeAreaImg);
 
 function makeAreaImg() {
     let areaValue = document.getElementById("text-area").value;
     let arrValue = areaValue.split('\n');
-
     for (let i = 0; i < arrValue.length; i++) {
         let tagName = document.createElement("img");
         tagName.src = arrValue[i];
