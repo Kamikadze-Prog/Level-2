@@ -2,7 +2,7 @@
 document.getElementById("display").onclick = display_box;
 document.getElementById("remove").onclick = remove_box;
 document.getElementById("hide").onclick = hide_box_1;
-let box = document.getElementById("rect");
+const box = document.getElementById("rect");
 box.style.display = 'block'
 
 function display_box() {
@@ -36,6 +36,7 @@ function hide_box_1() {
 
 /*Task-3*/
 document.getElementById("hide-2").addEventListener("click", hide_box_2);
+
 function hide_box_2() {
     let box_2 = document.querySelectorAll(".rect-wrapper");
     box_2.forEach(el => el.classList.toggle("hidden"));
@@ -55,7 +56,7 @@ function hide_box_3() {
 }
 
 /*Task-5*/
-let yellow_box = document.getElementById("block");
+const yellow_box = document.getElementById("block");
 
 yellow_box.addEventListener("click", say_hello);
 
@@ -70,7 +71,7 @@ function remove() {
 }
 
 /*Task-6*/
-let red_box_1 = document.getElementById("block-2");
+const red_box_1 = document.getElementById("block-2");
 
 function mouse_hover_1() {
     red_box_1.className = "hidden";
@@ -81,7 +82,7 @@ function mouseOut() {
 }
 
 /*Task-7*/
-let red_box_2 = document.getElementById("rect-2");
+const red_box_2 = document.getElementById("rect-2");
 
 document.getElementById("input-checker-2")
     .addEventListener("focus", () => red_box_2.style.opacity = '1');
@@ -120,7 +121,7 @@ document.onmousemove = (function (event) {
 })
 
 /*Task-11*/
-let userLang = navigator.language;
+const userLang = navigator.language;
 document.getElementById('userLanguage').textContent = "Lang: " + userLang;
 
 /*Task-12*/
@@ -150,10 +151,14 @@ setInterval(function () {
 }, 500);
 
 /*Task-14*/
+window.addEventListener('scroll', trackScroll);
+const goTopBtn = document.querySelector('.back_to_top');
+goTopBtn.addEventListener('click', backToTop);
+
 function trackScroll() {
+
     let scrolled = window.pageYOffset;
     let coords = document.documentElement.clientHeight;
-
     if (scrolled >= (scrollHeight - coords)) {
         goTopBtn.classList.add('back_to_top-show');
     }
@@ -169,11 +174,7 @@ function backToTop() {
     }
 }
 
-let goTopBtn = document.querySelector('.back_to_top');
-window.addEventListener('scroll', trackScroll);
-goTopBtn.addEventListener('click', backToTop);
-
-let scrollHeight = Math.max(
+const scrollHeight = Math.max(
     document.body.scrollHeight, document.documentElement.scrollHeight,
     document.body.offsetHeight, document.documentElement.offsetHeight,
     document.body.clientHeight, document.documentElement.clientHeight
@@ -181,17 +182,14 @@ let scrollHeight = Math.max(
 
 /*Task-15*/
 document.getElementById('big-block').onclick = () => alert("You clicked big block");
-document.getElementById('small-block').onclick = clickedSmallBlock;
-
-function clickedSmallBlock(event) {
-    alert("You clicked small block")
-    event.stopPropagation()
-
-}
+document.getElementById('small-block').addEventListener("click", (event) => {
+    alert("You clicked small block");
+    event.stopPropagation();
+});
 
 /*Task-16*/
 document.getElementById("show_hide_block").onclick = showBlock;
-let body = document.querySelector('.silver_box');
+const body = document.querySelector('.silver_box');
 
 function showBlock() {
     body.classList.add('not_scroll_box');
@@ -214,9 +212,9 @@ function offReload(e) {
 }
 
 /*Task-18*/
-let fileInput = document.querySelector('input[type=file]');
-let filenameContainer = document.querySelector('#filename');
-let dropZone = document.querySelector('.label-input');
+const fileInput = document.querySelector('input[type=file]'),
+    filenameContainer = document.querySelector('#filename'),
+    dropZone = document.querySelector('.label-input');
 
 fileInput.addEventListener('change', function () {
     filenameContainer.innerText = fileInput.value.split('\\').pop();
