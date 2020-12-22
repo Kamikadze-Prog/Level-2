@@ -132,14 +132,19 @@
 </div>
 
 <div class=wrapper>
-    <label for="input-file" class="label-input">
-        <div class="inner-wrapper">
-            <img alt="input-img" src="method-draw-image.svg" height="28" width="28">
-            <span class="input-file_text">Загрузить файл…</span>
+    <div class="label-wrapper">
+        <label for="input-file" class="label-input">
+            <div class="inner-wrapper">
+                <img alt="input-img" src="method-draw-image.svg" height="28" width="28">
+                <span class="input-file_text">Загрузить файл…</span>
+            </div>
+            <input type="file" onmouseout="mouseOutFile(this)" id="input-file">
+        </label>
+        <div class="input-text-wrapper">
+            <p id="filename"></p>
         </div>
-        <input type="file" onmouseout="mouseOutFile(this)" id="input-file">
-    </label>
-    <p id="filename"></p></div>
+    </div>
+</div>
 <a class="back_to_top" title="Вверх">Вверх</a>
 
 <script src="./js/script.js"></script>

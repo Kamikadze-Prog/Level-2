@@ -217,7 +217,12 @@ const fileInput = document.querySelector('input[type=file]'),
     dropZone = document.querySelector('.label-input');
 
 fileInput.addEventListener('change', function () {
-    filenameContainer.innerText = fileInput.value.split('\\').pop();
+    let splitValue = fileInput.value.split('\\').pop();
+    if (splitValue.length > 26) {
+        filenameContainer.innerText = splitValue.slice(0, 26) + "...";
+    } else {
+        filenameContainer.innerText = splitValue;
+    }
 });
 
 fileInput.addEventListener('dragenter', function () {
