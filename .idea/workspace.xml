@@ -18,6 +18,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -70,6 +71,8 @@
       <workItem from="1608662456308" duration="2615000" />
       <workItem from="1608668539872" duration="4760000" />
       <workItem from="1608717821714" duration="3697000" />
+      <workItem from="1608733275234" duration="13380000" />
+      <workItem from="1608753274572" duration="8338000" />
     </task>
     <servers />
   </component>
@@ -77,10 +80,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="808" y="396" key="#Inspections" timestamp="1608284799050">
+    <state x="808" y="396" key="#Inspections" timestamp="1608746321905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="808" y="396" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1608284799050" />
+    <state x="808" y="396" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1608746321905" />
     <state x="727" y="365" key="FileChooserDialogImpl" timestamp="1608109296577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

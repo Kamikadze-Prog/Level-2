@@ -213,6 +213,7 @@ function removeBox() {
 const submitButton = document.getElementById('button-submit');
 
 submitButton.addEventListener("click", offReload);
+
 function offReload(e) {
     e.preventDefault();
 }
@@ -241,4 +242,69 @@ fileInput.addEventListener('dragleave', function () {
 
 function mouseOutFile() {
     dropZone.classList.remove("dragover");
+}
+
+/*Big task*/
+
+{
+    let csvText = "10,21,Кропивницкий,200000\n" +
+        "11,22,Луганськ,12300\n" +
+        "12,23,Дніпропетровськ,2350\n" +
+        "\n" +
+        "13,24,Одесса,23522\n" +
+        "14,25,Харків,2352510\n" +
+        "15,26,Вінниця,23423\n" +
+        "#\n" +
+        "16,27,Чернігів,34636\n" +
+        "17,28,Миколаїв,234638\n" +
+        "18,29,Львів,457474\n" +
+        "#,#,#,#\n" +
+        "19,30,Тернопіль,3453\n" +
+        "20,31,Київ,354367\n" +
+        "21,32,Волинь,35368\n" +
+        "22,33,Сумми,235373\n" +
+        "23,34,Івано-Франківськ,365983\n" +
+        "24,35,Тернопіль,342450";
+
+    function parseCsvText(csvText) {
+        let count = 1;
+
+        return csvText
+            .split("\n")
+            .filter(el => /[0-9 а-я]/.test(el))
+            .map(e => countryObject(e.split(",")))
+            .sort((first, second) => second.population - first.population)
+            .slice(0, 10)
+            .map(e => bject(e, count++, e.city))
+            .reduce(function (acc, item) {
+                let obj = {...item}
+                
+                Object.keys(obj).forEach(function (item) {
+                        acc[item] = obj[item];
+                })
+                return acc;
+            })
+    }
+
+    function bject(e, count, cites) {
+        let ob = {};
+        ob[cites] = {
+            population: e.population,
+            raiting: count
+        }
+        return ob;
+    }
+
+    function countryObject(...e) {
+        return {
+            "x": e[0][0],
+            "y": e[0][1],
+            "city": e[0][2],
+            "population": e[0][3],
+        };
+    }
+
+    alert(Object.keys(csvText))
+
+    console.log(parseCsvText(csvText));
 }
