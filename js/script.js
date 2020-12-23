@@ -1,49 +1,49 @@
-/*Task-1*/
-document.getElementById("display").onclick = display_box;
-document.getElementById("remove").onclick = remove_box;
-document.getElementById("hide").onclick = hide_box_1;
+/*Task 1-2*/
+const displayBox = document.getElementById("display"),
+    removeTagBox = document.getElementById("remove"),
+    hideBox = document.getElementById("hide");
+
 const box = document.getElementById("rect");
 box.style.display = 'block'
 
-function display_box() {
+displayBox.addEventListener("click", () => {
     if (box.style.display === 'block') {
         box.style.display = "none"
     } else {
         box.style.display = "block"
     }
-}
+});
 
-function remove_box() {
+removeTagBox.addEventListener("click", () => {
     if (document.getElementById("rect") != null) {
         box.remove();
-        /*block else work not good if you do x3 click*/
     } else {
         let para = document.createElement("div");
         para.id = 'rect';
         let element = document.getElementById("rect-wrapper");
         element.appendChild(para);
     }
-}
-
-/*Task-2*/
-function hide_box_1() {
+});
+hideBox.addEventListener("click", () => {
     if (box.className === "hidden") {
         box.classList.remove("hidden");
     } else {
         box.className = "hidden";
     }
-}
+});
 
 /*Task-3*/
-document.getElementById("hide-2").addEventListener("click", hide_box_2);
+const hideBoxes = document.getElementById("hide-2");
+hideBoxes.addEventListener("click", hide_box_2);
 
 function hide_box_2() {
-    let box_2 = document.querySelectorAll(".rect-wrapper");
-    box_2.forEach(el => el.classList.toggle("hidden"));
+    let boxes = document.querySelectorAll(".rect-wrapper");
+    boxes.forEach(el => el.classList.toggle("hidden"));
 }
 
 /*Task-4*/
-document.getElementById("hide-3").addEventListener("click", hide_box_3);
+const hideBoxByClassName = document.getElementById("hide-3");
+hideBoxByClassName.addEventListener("click", hide_box_3);
 
 function hide_box_3() {
     let input = document.getElementById("input-checker").value;
@@ -56,41 +56,39 @@ function hide_box_3() {
 }
 
 /*Task-5*/
-const yellow_box = document.getElementById("block");
-
-yellow_box.addEventListener("click", say_hello);
+const paintedBox = document.getElementById("block");
+paintedBox.addEventListener("click", say_hello);
 
 function say_hello() {
     alert("Hello World!");
-    yellow_box.removeEventListener("click", say_hello)
-    yellow_box.addEventListener('click', remove);
+    paintedBox.removeEventListener("click", say_hello)
+    paintedBox.addEventListener('click', remove);
 }
 
 function remove() {
-    yellow_box.className = 'hidden'
+    paintedBox.className = 'hidden'
 }
 
 /*Task-6*/
-const red_box_1 = document.getElementById("block-2");
+const redBox = document.getElementById("block-2");
 
 function mouse_hover_1() {
-    red_box_1.className = "hidden";
+    redBox.className = "hidden";
 }
 
 function mouseOut() {
-    red_box_1.classList.remove("hidden");
+    redBox.classList.remove("hidden");
 }
 
 /*Task-7*/
-const red_box_2 = document.getElementById("rect-2");
-
-document.getElementById("input-checker-2")
-    .addEventListener("focus", () => red_box_2.style.opacity = '1');
-document.getElementById("input-checker-2")
-    .addEventListener("input", () => red_box_2.style.opacity = '0');
+const greenBox = document.getElementById("rect-2");
+const inputChecker = document.getElementById("input-checker-2")
+;
+inputChecker.addEventListener("focus", () => greenBox.style.opacity = '1');
+inputChecker.addEventListener("input", () => greenBox.style.opacity = '0');
 
 /* Task-8*/
-document.getElementById("img-btn-1").onclick = makeImg;
+document.getElementById("img-btn-1").addEventListener("click", makeImg);
 
 function makeImg() {
     let tagName = document.createElement("img");
@@ -101,7 +99,8 @@ function makeImg() {
 }
 
 /* Task-9*/
-document.getElementById("img-btn-2").addEventListener("click", makeAreaImg);
+const areaImgBtn = document.getElementById("img-btn-2");
+areaImgBtn.addEventListener("click", makeAreaImg);
 
 function makeAreaImg() {
     let areaValue = document.getElementById("text-area").value;
@@ -134,20 +133,23 @@ function success(pos) {
 }
 
 /*Task-13*/
-document.getElementById('local_store').innerHTML = localStorage['text'] || 'local';
-document.getElementById('cookies_box').innerHTML = document.cookie.split('=')[1] || 'cookies';
-document.getElementById('session_store').innerHTML = sessionStorage['text'] || 'session';
+const localStorageVal = document.getElementById('local_store'),
+    documentCookieVal = document.getElementById('cookies_box'),
+    sessionStorageVal = document.getElementById('session_store');
+
+localStorageVal.textContent = localStorage['text'] || 'local';
+documentCookieVal.textContent = document.cookie.split('=')[1] || 'cookies';
+sessionStorageVal.textContent = sessionStorage['text'] || 'session';
 
 setInterval(function () {
-    localStorage['text'] = document.getElementById('local_store').innerHTML;
+    localStorage['text'] = localStorageVal.textContent;
 }, 500);
 
 setInterval(function () {
-    document.cookie = `document=${document.getElementById('cookies_box').innerHTML}`;
+    document.cookie = `document=${documentCookieVal.textContent}`;
 }, 500);
-
 setInterval(function () {
-    sessionStorage['text'] = document.getElementById('session_store').innerHTML;
+    sessionStorage['text'] = sessionStorageVal.textContent;
 }, 500);
 
 /*Task-14*/
@@ -156,7 +158,6 @@ const goTopBtn = document.querySelector('.back_to_top');
 goTopBtn.addEventListener('click', backToTop);
 
 function trackScroll() {
-
     let scrolled = window.pageYOffset;
     let coords = document.documentElement.clientHeight;
     if (scrolled >= (scrollHeight - coords)) {
@@ -181,17 +182,20 @@ const scrollHeight = Math.max(
 );
 
 /*Task-15*/
-document.getElementById('big-block').onclick = () => alert("You clicked big block");
-document.getElementById('small-block').addEventListener("click", (event) => {
+const bigBox = document.getElementById('big-block'),
+    smallBox = document.getElementById('small-block');
+bigBox.addEventListener("click", () => alert("You clicked big block"));
+smallBox.addEventListener("click", (event) => {
     alert("You clicked small block");
     event.stopPropagation();
 });
 
 /*Task-16*/
-document.getElementById("show_hide_block").onclick = showBlock;
+const modalWindow = document.getElementById("show_hide_block");
 const body = document.querySelector('.silver_box');
+modalWindow.addEventListener("click", showModalBox);
 
-function showBlock() {
+function showModalBox() {
     body.classList.add('not_scroll_box');
     document.querySelector('body').classList.add('stop-scrolling')
     if (body.classList.contains('not_scroll_box')) {
@@ -205,8 +209,10 @@ function removeBox() {
 }
 
 /*Task-17*/
-document.getElementById('button-submit').onclick = offReload;
 
+const submitButton = document.getElementById('button-submit');
+
+submitButton.addEventListener("click", offReload);
 function offReload(e) {
     e.preventDefault();
 }
