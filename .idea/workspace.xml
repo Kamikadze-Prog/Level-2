@@ -25,11 +25,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub\Level-2" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\GitHub\Level-2\js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub\Level-2" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,6 +76,7 @@
       <workItem from="1608794456818" duration="352000" />
       <workItem from="1608795527264" duration="1780000" />
       <workItem from="1608799749822" duration="914000" />
+      <workItem from="1608893906693" duration="5948000" />
     </task>
     <servers />
   </component>

@@ -245,7 +245,6 @@ function mouseOutFile() {
 }
 
 /*Big task*/
-
 {
     let csvText = "10,21,Кропивницкий,200000\n" +
         "11,22,Луганськ,12300\n" +
@@ -268,7 +267,7 @@ function mouseOutFile() {
 
     function parseCsvText(csvText) {
         let count = 1;
-        let parsedText= csvText
+        let parsedText = csvText
             .split("\n")
             .filter(elem => /[0-9 а-я]/.test(elem))
             .map(elem => countryObject(elem.split(",")))
@@ -276,9 +275,7 @@ function mouseOutFile() {
             .slice(0, 10)
             .map(elem => makeTopCityObj(elem, count++, elem.city))
             .reduce(function (parsedText, item) {
-                Object.keys(item).forEach(function (items) {
-                    parsedText[items] = item[items];
-                })
+                Object.keys(item).forEach((items) => parsedText[items] = item[items])
                 return parsedText;
             }, {});
         return (parsedText);
@@ -293,14 +290,24 @@ function mouseOutFile() {
         return obj;
     }
 
-    function countryObject(...e) {
+    function countryObject(...element) {
         return {
-            "x": e[0][0],
-            "y": e[0][1],
-            "city": e[0][2],
-            "population": e[0][3],
+            "x": element[0][0],
+            "y": element[0][1],
+            "city": element[0][2],
+            "population": element[0][3],
         };
     }
 
-    console.log(parseCsvText(csvText));
+    let parsedText = parseCsvText(csvText);
+    /*Test parsed text*/
+    let showParsedText = (parsedText) => {
+        Object.keys(parsedText)
+            .forEach(function eachKey(key) {
+               console.log("City: " + key + " Population: " + parsedText[key].population + " Top: " + parsedText[key].rating);
+            });
+    };
+
+    showParsedText(parsedText);
+    console.log(parsedText);
 }
