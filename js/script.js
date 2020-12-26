@@ -273,21 +273,19 @@ function mouseOutFile() {
             .map(elem => countryObject(elem.split(",")))
             .sort((first, second) => second.population - first.population)
             .slice(0, 10)
-            .map(elem => makeTopCityObj(elem, count++, elem.city))
+            .map((elem) => {
+                let obj = {};
+                obj[elem.city] = {
+                    "population": elem.population,
+                    "rating": count
+                }
+                return obj;
+            })
             .reduce(function (parsedText, item) {
                 Object.keys(item).forEach((items) => parsedText[items] = item[items])
                 return parsedText;
             }, {});
         return (parsedText);
-    }
-
-    function makeTopCityObj(e, count, cites) {
-        let obj = {};
-        obj[cites] = {
-            "population": e.population,
-            "rating": count
-        }
-        return obj;
     }
 
     function countryObject(...element) {
@@ -304,7 +302,7 @@ function mouseOutFile() {
     let showParsedText = (parsedText) => {
         Object.keys(parsedText)
             .forEach(function eachKey(key) {
-               console.log("City: " + key + " Population: " + parsedText[key].population + " Top: " + parsedText[key].rating);
+                console.log("City: " + key + " Population: " + parsedText[key].population + " Top: " + parsedText[key].rating);
             });
     };
 
