@@ -19,7 +19,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="LET" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Level-3" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -89,7 +89,8 @@
       <workItem from="1609017473407" duration="1795000" />
       <workItem from="1609053603805" duration="1082000" />
       <workItem from="1609055373217" duration="824000" />
-      <workItem from="1609074491332" duration="3546000" />
+      <workItem from="1609074491332" duration="3671000" />
+      <workItem from="1609092456305" duration="85000" />
     </task>
     <servers />
   </component>
@@ -105,10 +106,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609074540818" />
-    <state x="727" y="365" key="FileChooserDialogImpl" timestamp="1608919046803">
+    <state x="727" y="365" key="FileChooserDialogImpl" timestamp="1609092539232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="727" y="365" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608919046803" />
+    <state x="727" y="365" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609092539232" />
     <state x="922" y="329" key="SettingsEditor" timestamp="1608717856769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
