@@ -269,7 +269,15 @@ function mouseOutFile() {
         let parsedText = csvText
             .split("\n")
             .filter(elem => /[0-9 а-я]/.test(elem))
-            .map(elem => countryObject(elem.split(",")))
+            .map(function (oneCity){
+               let splitOneCity = oneCity.split(",")
+                return {
+                    "x": splitOneCity[0],
+                    "y": splitOneCity[1],
+                    "city": splitOneCity[2],
+                    "population": splitOneCity[3],
+                };
+            })
             .sort((first, second) => second.population - first.population)
             .slice(0, 10)
             .reduce(function (topCity, elem, index) {
@@ -279,21 +287,14 @@ function mouseOutFile() {
                 };
                 return topCity;
             }, {});
+
         return (parsedText);
     }
 
-    function countryObject(...element) {
-        return {
-            "x": element[0][0],
-            "y": element[0][1],
-            "city": element[0][2],
-            "population": element[0][3],
-        };
-    }
+   const parsedText = parseCsvText(csvText);
 
-    let parsedText = parseCsvText(csvText);
     /*Test parsed text*/
-    let showParsedText = (parsedText) => {
+    const showParsedText = (parsedText) => {
         Object.keys(parsedText)
             .forEach(function eachKey(key) {
                 console.log("City: " + key + " Population: " + parsedText[key].population + " Top: " + parsedText[key].rating);
