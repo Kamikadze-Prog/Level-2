@@ -246,31 +246,32 @@ function mouseOutFile() {
 
 /*Big task*/
 {
-    let csvText = "10,21,Кропивницкий,200000\n" +
-        "11,22,Луганськ,12300\n" +
-        "12,23,Дніпропетровськ,2350\n" +
-        "\n" +
-        "13,24,Одесса,23522\n" +
-        "14,25,Харків,2352510\n" +
-        "15,26,Вінниця,23423\n" +
-        "#\n" +
-        "16,27,Чернігів,34636\n" +
-        "17,28,Миколаїв,234638\n" +
-        "18,29,Львів,457474\n" +
-        "#,#,#,#\n" +
-        "19,30,Тернопіль,3453\n" +
-        "20,31,Київ,354367\n" +
-        "21,32,Волинь,35368\n" +
-        "22,33,Сумми,235373\n" +
-        "23,34,Івано-Франківськ,365983\n" +
-        "24,35,Тернопіль,342450";
+    let csvText = `10,21,Кропивницкий,200000
+        11,22,Луганськ,12300
+        12,23,Дніпропетровськ,2350
+        
+        13,24,Одесса,23522
+        14,25,Харків,2352510
+        15,26,Вінниця,23423
+        
+        16,27,Чернігів,34636
+        17,28,Миколаїв,234638
+        18,29,Львів,457474
+        #,#,#,#
+        #
+        19,30,Тернопіль,3453
+        20,31,Київ,354367
+        21,32,Волинь,35368
+        22,33,Сумми,235373
+        23,34,Івано-Франківськ,365983
+        24,35,Тернопіль,342450`;
 
     function parseCsvText(csvText) {
         let parsedText = csvText
             .split("\n")
             .filter(elem => /[0-9 а-я]/.test(elem))
-            .map(function (oneCity){
-               let splitOneCity = oneCity.split(",")
+            .map(function (oneCity) {
+                let splitOneCity = oneCity.split(",")
                 return {
                     "x": splitOneCity[0],
                     "y": splitOneCity[1],
@@ -291,16 +292,18 @@ function mouseOutFile() {
         return (parsedText);
     }
 
-   const parsedText = parseCsvText(csvText);
+    const parsedText = parseCsvText(csvText);
+    console.log(parsedText);
 
     /*Test parsed text*/
-    const showParsedText = (parsedText) => {
-        Object.keys(parsedText)
-            .forEach(function eachKey(key) {
-                console.log("City: " + key + " Population: " + parsedText[key].population + " Top: " + parsedText[key].rating);
-            });
+    const showParsedText = (parsedText, text) => {
+        if (parsedText[text] !== undefined) {
+            text = text.replace(text, `${text + " population: " + parsedText[text].population + " rating: " + parsedText[text].rating}`);
+            return text;
+        }
+        return text
     };
 
-    showParsedText(parsedText);
-    console.log(parsedText);
+    alert(showParsedText(parsedText, "Харків"));
+
 }
