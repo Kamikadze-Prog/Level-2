@@ -266,24 +266,18 @@ function mouseOutFile() {
         "24,35,Тернопіль,342450";
 
     function parseCsvText(csvText) {
-        let count = 1;
         let parsedText = csvText
             .split("\n")
             .filter(elem => /[0-9 а-я]/.test(elem))
             .map(elem => countryObject(elem.split(",")))
             .sort((first, second) => second.population - first.population)
             .slice(0, 10)
-            .map((elem) => {
-                let obj = {};
-                obj[elem.city] = {
-                    "population": elem.population,
-                    "rating": count
-                }
-                return obj;
-            })
-            .reduce(function (parsedText, item) {
-                Object.keys(item).forEach((items) => parsedText[items] = item[items])
-                return parsedText;
+            .reduce(function (topCity, elem, index) {
+                topCity[elem.city] = {
+                    population: elem.population,
+                    rating: index + 1
+                };
+                return topCity;
             }, {});
         return (parsedText);
     }
