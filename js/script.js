@@ -256,7 +256,7 @@ function mouseOutFile() {
         
         16,27,Чернігів,34636
         17,28,Миколаїв,234638
-        18,29,Львів,457474
+        18,29,Львів,45747400
         #,#,#,#
         #
         19,30,Тернопіль,3453
@@ -267,7 +267,7 @@ function mouseOutFile() {
         24,35,Тернопіль,342450`;
 
     function parseCsvText(csvText) {
-        let parsedText = csvText
+        const parsedText = csvText
             .split("\n")
             .filter(elem => /[0-9 а-я]/.test(elem))
             .map(function (oneCity) {
@@ -289,21 +289,23 @@ function mouseOutFile() {
                 return topCity;
             }, {});
 
-        return (parsedText);
+        return (text) => {
+            Object.keys(parsedText).forEach(el => {
+                if (text.indexOf(el) === 0) {
+                    text = text.replace(el, `${el + " население " + parsedText[el].population + " человек "
+                    + parsedText[el].rating + " место в ТОП-10 самых крупных городов Украины,"}`);
+                    return text;
+                }
+            })
+            return text
+        };
     }
 
     const parsedText = parseCsvText(csvText);
-    console.log(parsedText);
 
-    /*Test parsed text*/
-    const showParsedText = (parsedText, text) => {
-        if (parsedText[text] !== undefined) {
-            text = text.replace(text, `${text + " population: " + parsedText[text].population + " rating: " + parsedText[text].rating}`);
-            return text;
-        }
-        return text
-    };
+    console.log(parsedText("Харків супер крутой город"));
+    console.log(parsedText("Львів супер крутой город"));
 
-    alert(showParsedText(parsedText, "Харків"));
+
 
 }
