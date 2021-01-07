@@ -81,9 +81,8 @@ function mouseOut() {
 }
 
 /*Task-7*/
-const greenBox = document.getElementById("rect-2");
-const inputChecker = document.getElementById("input-checker-2")
-;
+const greenBox = document.getElementById("rect-2"),
+    inputChecker = document.getElementById("input-checker-2");
 inputChecker.addEventListener("focus", () => greenBox.style.opacity = '1');
 inputChecker.addEventListener("input", () => greenBox.style.opacity = '0');
 
@@ -246,7 +245,7 @@ function mouseOutFile() {
 
 /*Big task*/
 {
-    let csvText = `10,21,Кропивницкий,200000
+    const csvText = `10,21,Кропивницкий,200000
         11,22,Луганськ,12300
         12,23,Дніпропетровськ,2350
         
@@ -303,9 +302,6 @@ function mouseOutFile() {
 
     const parsedText = parseCsvText(csvText);
 
-    console.log(parsedText("Харків супер крутой город"));
-    console.log(parsedText("Львів супер крутой город"));
-
-
-
+    console.log(parsedText("Харків супер круте місто"));
+    console.log(parsedText("Львів супер круте місто"));
 }
