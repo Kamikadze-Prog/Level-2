@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="608044f0-471e-4533-addc-e248cf59c564" name="Default Changelist" comment="" />
+    <list default="true" id="608044f0-471e-4533-addc-e248cf59c564" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,6 +105,19 @@
       <workItem from="1609787191519" duration="3822000" />
       <workItem from="1609836945892" duration="398000" />
       <workItem from="1610035151666" duration="211000" />
+      <workItem from="1610105427281" duration="16000" />
+      <workItem from="1610272489914" duration="14000" />
+      <workItem from="1610397133435" duration="532000" />
+      <workItem from="1610397776985" duration="18000" />
+      <workItem from="1610398158569" duration="12000" />
+      <workItem from="1610459682045" duration="100000" />
+      <workItem from="1610476712396" duration="66000" />
+      <workItem from="1610638991143" duration="13000" />
+      <workItem from="1610644758137" duration="19000" />
+      <workItem from="1610644870481" duration="48000" />
+      <workItem from="1610813935723" duration="47000" />
+      <workItem from="1615502903826" duration="22000" />
+      <workItem from="1613156830659" duration="44000" />
     </task>
     <servers />
   </component>
@@ -117,10 +133,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609074540818" />
-    <state x="727" y="365" key="FileChooserDialogImpl" timestamp="1609837341882">
+    <state x="727" y="365" key="FileChooserDialogImpl" timestamp="1610105443069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="727" y="365" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609837341882" />
+    <state x="727" y="365" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610105443069" />
     <state x="922" y="329" key="SettingsEditor" timestamp="1608717856769">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
